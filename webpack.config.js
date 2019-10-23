@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -12,20 +13,27 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: ['html-loader?attrs=false', 'pug-html-loader']
+            },
+            {
+                test: /\.(sc|c|sa)ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+                ]
             }
         ]
     },
     devtool: "source-map",
     plugins: [
+        new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "src/pages/index.pug",
-            inject: false,
+            inject: true,
         }),
         new HtmlWebpackPlugin({
             filename: "about.html",
             template: "src/pages/about.pug",
-            inject: false,
+            inject: true,
         }),
     ]
 };
