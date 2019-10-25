@@ -1,22 +1,53 @@
 extends ../../../layout
 include ../../../components/colorPresenter/colorPresenter
+include ../../../components/typographyPresenter/typographyPresenter
 
 block head
     title Colors & Type
 
 block content
     .colorsAndType
-        .colorPresenterContainer
-            +colorPresenter('#1F2041', 'Dark Shade 100%', 'bg-darkShade100')
-        .colorPresenterContainer
-            +colorPresenter('#1F2041', 'Dark Shade 75%', 'bg-darkShade75')
-        .colorPresenterContainer
-            +colorPresenter('#1F2041', 'Dark Shade 50%', 'bg-darkShade50')
-        .colorPresenterContainer
-            +colorPresenter('#1F2041', 'Dark Shade 25%', 'bg-darkShade25')
-        .colorPresenterContainer
-            +colorPresenter('#1F2041', 'Dark Shade 5%', 'bg-darkShade05')
-        .colorPresenterContainer
-            +colorPresenter('#BC9CFF', 'Purple', 'bg-purple')
-        .colorPresenterContainer
-            +colorPresenter('#6FCF97', 'Green', 'bg-green')
+        .colors
+            .colorPresenterContainer
+                +colorPresenter('#1F2041', 'Dark Shade 100%', 'bg-darkShade100')
+            .colorPresenterContainer
+                +colorPresenter('#1F2041', 'Dark Shade 75%', 'bg-darkShade75')
+            .colorPresenterContainer
+                +colorPresenter('#1F2041', 'Dark Shade 50%', 'bg-darkShade50')
+            .colorPresenterContainer
+                +colorPresenter('#1F2041', 'Dark Shade 25%', 'bg-darkShade25')
+            .colorPresenterContainer
+                +colorPresenter('#1F2041', 'Dark Shade 5%', 'bg-darkShade05')
+            .colorPresenterContainer
+                +colorPresenter('#BC9CFF', 'Purple', 'bg-purple')
+            .colorPresenterContainer
+                +colorPresenter('#6FCF97', 'Green', 'bg-green')
+        .typography
+            .typographyPresenterContainer
+                +typographyPresenter(
+                    'H1',
+                    'This one is the sub-section or widget title',
+                    'heading-1',
+                    'typographyPresenter__content--h1'
+                    )
+            .typographyPresenterContainer
+                +typographyPresenter(
+                    'H2',
+                    'Next one is the item title inside widgets',
+                    'heading-2',
+                    'typographyPresenter__content--h2'
+                )
+            .typographyPresenterContainer
+                +typographyPresenter(
+                    'H3',
+                    'This is a label or CTA text',
+                    'heading-3',
+                    'typographyPresenter__content--h3'
+                )
+            .typographyPresenterContainer
+                +typographyPresenter(
+                    'Body',
+                    'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+                    null,
+                    'typographyPresenter__content--body'
+                )

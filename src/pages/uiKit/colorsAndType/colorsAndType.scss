@@ -1,9 +1,16 @@
 @import "../../../components/colorPresenter/colorPresenter";
+@import "../../../components/typographyPresenter/typographyPresenter";
 
 .colorsAndType {
   padding: 145px 150px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .colorPresenterContainer {
   margin-bottom: 20px;
+}
+
+.typographyPresenterContainer {
+  margin-bottom: 50px;
 }

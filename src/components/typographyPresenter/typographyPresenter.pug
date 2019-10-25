@@ -1,0 +1,16 @@
+mixin typographyPresenter(title, content, headingClass, contentModifier)
+    -
+        const titleClasses = ['typographyPresenter__title'];
+        const contentClasses = ['typographyPresenter__content'];
+        if (headingClass) {
+            titleClasses.push(headingClass);
+            contentClasses.push(headingClass);
+        }
+        if (contentModifier) {
+            contentClasses.push(contentModifier);
+        }
+    .typographyPresenter
+        span(class=titleClasses)
+            | #{title}
+        p(class=contentClasses)
+            | #{content}
