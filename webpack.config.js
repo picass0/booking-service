@@ -30,13 +30,8 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "src/pages/index.pug",
-            inject: true,
-        }),
-        new HtmlWebpackPlugin({
-            filename: "about.html",
-            template: "src/pages/about.pug",
+            filename: "colors-and-types.html",
+            template: "src/pages/uiKit/colorsAndType/colorsAndType.pug",
             inject: true,
         }),
     ]

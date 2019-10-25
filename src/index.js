@@ -1,3 +1,2 @@
 import './main.scss';
-
-console.log('test');
+import './pages/uiKit/colorsAndType/colorsAndType';
