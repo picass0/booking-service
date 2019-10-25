@@ -1,8 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
+    optimization: {
+        minimizer: [new OptimizeCSSAssetsPlugin({})],
+    },
     entry: './src/index.js',
     output: {
         filename: 'main.js',
