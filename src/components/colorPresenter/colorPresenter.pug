@@ -1,0 +1,8 @@
+mixin colorPresenter(color, description, colorBoxClass)
+    .colorPresenter
+        div(class=['colorPresenter__box', colorBoxClass])
+        .colorPresenter__textContainer
+            h2.heading-2.colorPresenter__textLine
+                | #{description}
+            span.colorPresenter__colorName.colorPresenter__textLine
+                | #{color}
