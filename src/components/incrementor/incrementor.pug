@@ -1,0 +1,6 @@
+mixin incrementor(value)
+    - const decreaseDisabled = value.toString() === '0';
+    .incrementor
+        button( class='incrementor__decrease' disabled=decreaseDisabled) -
+        span.heading-3= value
+        button.incrementor__increase +

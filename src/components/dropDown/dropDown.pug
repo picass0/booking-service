@@ -1,0 +1,25 @@
+include ../textField/textField
+include ../incrementor/incrementor
+
+mixin dropDown(options)
+    .dropDown
+        +textField({
+            type: 'text',
+            disabled: true,
+            value: 'Сколько гостей',
+            label: 'dropdown',
+            name: 'dropdown-shrank',
+            icon: 'expand_more',
+            modifier: 'textField__input--dropDownHeader'
+        })
+        ul.dropDown__content
+            li.dropDown__li
+                div.heading-3 Спальни
+                +incrementor(2)
+
+            li.dropDown__li
+                div.heading-3 Кровати
+                +incrementor(2)
+            li.dropDown__li
+                div.heading-3 Ванные комнаты
+                +incrementor(0)

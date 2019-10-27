@@ -1,4 +1,5 @@
 @import "../../../components/textField/textField";
+@import "../../../components/dropDown/dropDown";
 
 .formElements {
   padding: 143px 141px 132px 140px;
@@ -9,6 +10,7 @@
     top: -1px;
     font: normal 12px/15px 'Montserrat', sans-serif;
     text-transform: uppercase;
+    color: $darkShade50;
   }
 }
 
@@ -17,5 +19,9 @@
   position: relative;
   &--2 {
     top: 20px;
+  }
+
+  &--3 {
+    top: 40px;
   }
 }

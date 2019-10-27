@@ -1,6 +1,7 @@
 @import "../../scss/colors";
 
 .textField {
+  position: relative;
   &__label, &__input {
     display: block;
   }
@@ -16,11 +17,31 @@
     padding: 13px 15px;
     width: 100%;
     font: normal 14px/18px 'Montserrat', sans-serif;
-    color: $darkShade25;
+    color: $darkShade75;
+
+    &::placeholder {
+      color: $darkShade25;
+    }
 
     &--hover, &:hover, &:focus {
       border-color: $darkShade50;
       outline: none;
     }
+
+    &:disabled {
+      background: inherit;
+    }
+
+    &--dropDownHeader {
+      cursor: pointer;
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom:11px;
+    right: 11px;
+    cursor: pointer;
   }
 }

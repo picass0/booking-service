@@ -6,13 +6,21 @@ mixin textField(options)
         const value = options.value;
         const type = options.type || 'text';
         const modifier = options.modifier;
+        const id = options.id;
+        const icon = options.icon;
+        const disabled = options.disabled;
 
     .textField
         label(class="textField__label heading-3" for=name)= label
         input(
+            id=id
             class=["textField__input", modifier]
             type=type
             name=name
             placeholder=placeholder
             value=value
+            disabled=disabled
         )
+        if icon
+            i.material-icons.textField__icon
+                | #{icon}

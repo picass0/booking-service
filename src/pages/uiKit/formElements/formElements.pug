@@ -1,5 +1,6 @@
 extends ../../../layout
 include ../../../components/textField/textField
+include ../../../components/dropDown/dropDown
 
 block head
     title Form Elements
@@ -13,4 +14,8 @@ block content
         .textFieldContainer.textFieldContainer--2
             .formElements__title
                 | hover/focus
-            +textField({name: 'emailHovered', placeholder: 'Email', label: 'text field', placeholder: 'This is pretty awesome', modifier: 'textField__input--hover'})
+            +textField({name: 'emailHovered', placeholder: 'Email', label: 'text field', value: 'This is pretty awesome', modifier: 'textField__input--hover'})
+        .textFieldContainer.textFieldContainer--3
+            .formElements__title
+                | default
+            +dropDown()
