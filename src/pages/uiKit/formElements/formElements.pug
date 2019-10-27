@@ -1,0 +1,16 @@
+extends ../../../layout
+include ../../../components/textField/textField
+
+block head
+    title Form Elements
+
+block content
+    .formElements
+        .textFieldContainer
+            .formElements__title
+                | default
+            +textField({name: 'email', placeholder: 'Email', label: 'text field', type: 'email'})
+        .textFieldContainer.textFieldContainer--2
+            .formElements__title
+                | hover/focus
+            +textField({name: 'emailHovered', placeholder: 'Email', label: 'text field', placeholder: 'This is pretty awesome', modifier: 'textField__input--hover'})

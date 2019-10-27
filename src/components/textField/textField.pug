@@ -1,0 +1,18 @@
+mixin textField(options)
+    -
+        const label = options.label;
+        const name = options.name;
+        const placeholder = options.placeholder;
+        const value = options.value;
+        const type = options.type || 'text';
+        const modifier = options.modifier;
+
+    .textField
+        label(class="textField__label heading-3" for=name)= label
+        input(
+            class=["textField__input", modifier]
+            type=type
+            name=name
+            placeholder=placeholder
+            value=value
+        )

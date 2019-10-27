@@ -46,5 +46,10 @@ module.exports = {
             template: "src/pages/uiKit/colorsAndType/colorsAndType.pug",
             inject: true,
         }),
+        new HtmlWebpackPlugin({
+            filename: "form-elements.html",
+            template: "src/pages/uiKit/formElements/formElements.pug",
+            inject: true,
+        }),
     ]
 };

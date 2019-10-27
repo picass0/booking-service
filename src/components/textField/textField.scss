@@ -1,0 +1,26 @@
+@import "../../scss/colors";
+
+.textField {
+  &__label, &__input {
+    display: block;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid $darkShade25;
+    border-radius: 4px;
+    padding: 13px 15px;
+    width: 100%;
+    font: normal 14px/18px 'Montserrat', sans-serif;
+    color: $darkShade25;
+
+    &--hover, &:hover, &:focus {
+      border-color: $darkShade50;
+      outline: none;
+    }
+  }
+}

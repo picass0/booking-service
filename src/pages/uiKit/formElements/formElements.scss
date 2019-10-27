@@ -1,0 +1,21 @@
+@import "../../../components/textField/textField";
+
+.formElements {
+  padding: 143px 141px 132px 140px;
+
+  &__title {
+    position:absolute;
+    right: 0;
+    top: -1px;
+    font: normal 12px/15px 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+}
+
+.textFieldContainer {
+  width: 320px;
+  position: relative;
+  &--2 {
+    top: 20px;
+  }
+}
